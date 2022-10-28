@@ -26,6 +26,12 @@ public class AppUI extends JFrame {
         listaPanel = new JPanel();
         listaPanel.setLayout(new BoxLayout(listaPanel,BoxLayout.Y_AXIS));
         JScrollPane scrollPane = new JScrollPane(listaPanel);
+
+        botao = new JButton("  GRAVAR  ");
+        botao.setVerticalTextPosition(AbstractButton.BOTTOM);
+        botao.setHorizontalTextPosition(AbstractButton.LEADING);
+        listaPanel.add(botao);
+
         popularLista();
         add(scrollPane);
         
@@ -40,10 +46,7 @@ public class AppUI extends JFrame {
         JanelaLayout.setAutoCreateContainerGaps(true);
 
         // work in button now
-        botao = new JButton("  GRAVAR  ");
-        botao.setVerticalTextPosition(AbstractButton.BOTTOM);
-        botao.setHorizontalTextPosition(AbstractButton.LEADING);
-        scrollPane.add(botao);
+
 
 
         //Config lines
@@ -58,6 +61,7 @@ public class AppUI extends JFrame {
         //listaPanel.add(Box.createVerticalStrut(10));
         //listaPanel.add(Box.createHorizontalStrut(10));
 
+        //scrollPane.revalidate();
     }
 
     private void popularLista(){
