@@ -13,7 +13,7 @@ public class AppUI extends JFrame {
     private GroupLayout JanelaLayout;
 
     public AppUI(){
-        setTitle("Lista");
+        setTitle("Tarefas");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(300,500);
         servico = new ObterTarefasServico();
@@ -27,10 +27,12 @@ public class AppUI extends JFrame {
         listaPanel.setLayout(new BoxLayout(listaPanel,BoxLayout.Y_AXIS));
         JScrollPane scrollPane = new JScrollPane(listaPanel);
 
-        botao = new JButton("  GRAVAR  ");
-        botao.setVerticalTextPosition(AbstractButton.BOTTOM);
-        botao.setHorizontalTextPosition(AbstractButton.LEADING);
+        //Add bottom
+        botao = new JButton("NOVA TAREFA");
+        botao.setVerticalTextPosition(AbstractButton.TOP);
+        botao.setHorizontalTextPosition(AbstractButton.RIGHT);
         listaPanel.add(botao);
+        //botao.setLocation(202,100);
 
         popularLista();
         add(scrollPane);
@@ -44,10 +46,6 @@ public class AppUI extends JFrame {
         //listaPanel.setLayout(JanelaLayout);
         JanelaLayout.setAutoCreateGaps(true);
         JanelaLayout.setAutoCreateContainerGaps(true);
-
-        // work in button now
-
-
 
         //Config lines
         //scrollPane.setPreferredSize(new Dimension(250, 250));
