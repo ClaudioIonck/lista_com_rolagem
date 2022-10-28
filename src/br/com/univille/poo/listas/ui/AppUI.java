@@ -9,6 +9,7 @@ public class AppUI extends JFrame {
 
     private JPanel listaPanel;
     private ObterTarefasServico servico;
+    JButton botao;
 
     public AppUI(){
         setTitle("Lista");
@@ -26,12 +27,18 @@ public class AppUI extends JFrame {
         popularLista();
         add(scrollPane);
 
+        // work in button now
+        botao = new JButton("  GRAVAR  ");
+        botao.setVerticalTextPosition(AbstractButton.BOTTOM);
+        botao.setHorizontalTextPosition(AbstractButton.LEADING);
+        scrollPane.add(botao);
+
 
 
         listaPanel.setBorder(
                 BorderFactory.createCompoundBorder(
                         BorderFactory.createCompoundBorder(
-                                BorderFactory.createTitledBorder("Tarefa"),
+                                BorderFactory.createTitledBorder("Tarefas"),
                                 BorderFactory.createEmptyBorder(5,5,5,5)),
                         listaPanel.getBorder()));
 
@@ -51,6 +58,12 @@ public class AppUI extends JFrame {
     private JPanel criarItemDaLista(String item){
         JPanel panel = new JPanel();
         JLabel label = new JLabel(item);
+
+        //add check box
+        JCheckBox CheckBox = new JCheckBox("");
+        CheckBox.setSelected(true);
+        panel.add(CheckBox);
+
         panel.setBorder(BorderFactory.createEtchedBorder());
         panel.add(label);
         return panel;
