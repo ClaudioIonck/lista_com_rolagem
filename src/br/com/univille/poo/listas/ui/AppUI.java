@@ -58,7 +58,8 @@ public class AppUI extends JFrame {
     private void popularLista(){
         for(String s : servico.obterTodos()){
             listaPanel.add(criarItemDaLista(s));
-
+            listaPanel.add(Box.createVerticalStrut(10));
+            listaPanel.add(Box.createHorizontalStrut(10));
 
         }
 
