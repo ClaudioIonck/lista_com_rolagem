@@ -31,8 +31,23 @@ public class AppUI extends JFrame {
         botao = new JButton("NOVA TAREFA");
         botao.setVerticalTextPosition(AbstractButton.TOP);
         botao.setHorizontalTextPosition(AbstractButton.RIGHT);
+
         listaPanel.add(botao);
+        listaPanel.add(Box.createVerticalStrut(20));
+
+
+        //Work
+        /**
+
+        JButton button = new JButton("Demo Button");
+        Dimension size = button.getPreferredSize();
+        button.setBounds(300, 180, size.width, size.height);
+        listaPanel.setLayout(null);
+        listaPanel.add(button);
+        listaPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         //botao.setLocation(202,100);
+        //listaPanel.setLayout(botao.getLayout());
+        //botao.setBounds(200,50,50,50);**/
 
         popularLista();
         add(scrollPane);
