@@ -17,6 +17,7 @@ public class AppUI extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(300,500);
         servico = new ObterTarefasServico();
+
         configurarJanela();
 
     }
@@ -29,7 +30,7 @@ public class AppUI extends JFrame {
         add(scrollPane);
         
         //layout = cria bordas dentro do app
-        listaPanel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
+        listaPanel.setBorder(BorderFactory.createEmptyBorder(5,5,5,1));
         
 
         //Config gaps
@@ -45,13 +46,17 @@ public class AppUI extends JFrame {
         scrollPane.add(botao);
 
 
+        //Config lines
+        //scrollPane.setPreferredSize(new Dimension(250, 250));
 
         listaPanel.setBorder(
                 BorderFactory.createCompoundBorder(
                         BorderFactory.createCompoundBorder(
                                 BorderFactory.createTitledBorder("Tarefas"),
-                                BorderFactory.createEmptyBorder(5,5,5,5)),
+                                BorderFactory.createEmptyBorder(10,10,10,10)),
                         listaPanel.getBorder()));
+        //listaPanel.add(Box.createVerticalStrut(10));
+        //listaPanel.add(Box.createHorizontalStrut(10));
 
     }
 
