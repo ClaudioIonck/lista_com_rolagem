@@ -10,6 +10,7 @@ public class AppUI extends JFrame {
     private JPanel listaPanel;
     private ObterTarefasServico servico;
     JButton botao;
+    private GroupLayout JanelaLayout;
 
     public AppUI(){
         setTitle("Lista");
@@ -26,6 +27,16 @@ public class AppUI extends JFrame {
         JScrollPane scrollPane = new JScrollPane(listaPanel);
         popularLista();
         add(scrollPane);
+        
+        //layout = cria bordas dentro do app
+        listaPanel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
+        
+
+        //Config gaps
+        GroupLayout JanelaLayout = new GroupLayout(listaPanel);
+        //listaPanel.setLayout(JanelaLayout);
+        JanelaLayout.setAutoCreateGaps(true);
+        JanelaLayout.setAutoCreateContainerGaps(true);
 
         // work in button now
         botao = new JButton("  GRAVAR  ");
@@ -50,8 +61,6 @@ public class AppUI extends JFrame {
 
 
         }
-        // add lines border
-
 
     }
 
