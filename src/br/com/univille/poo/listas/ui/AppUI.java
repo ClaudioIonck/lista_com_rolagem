@@ -28,22 +28,29 @@ public class AppUI extends JFrame {
 
     private void configurarJanela() {
         listaPanel = new JPanel();
+        listaPanel.setLayout( new BorderLayout());
         listaPanel.setLayout(new BoxLayout(listaPanel,BoxLayout.Y_AXIS));
         JScrollPane scrollPane = new JScrollPane(listaPanel);
-
-        //Add bottom
-        botao = new JButton("NOVA TAREFA");
-        botao.setVerticalTextPosition(AbstractButton.TOP);
-        botao.setHorizontalTextPosition(AbstractButton.RIGHT);
-
-
-        listaPanel.add(botao);
-        listaPanel.add(Box.createVerticalStrut(20));
 
         //Work
         rotulo = new JLabel("Registrar tarefa");
         rotulo.setAlignmentX(Component.CENTER_ALIGNMENT);
         listaPanel.add(rotulo);
+
+        //Add bottom
+        botao = new JButton("NOVA TAREFA");
+        //botao.setVerticalTextPosition(AbstractButton.TOP);
+        //botao.setHorizontalTextPosition(AbstractButton.RIGHT);
+        botao.addActionListener(te);
+        botao.setActionCommand("NOVA TAREFA");
+        botao.setPreferredSize(new Dimension(30,30));
+        botao.setMinimumSize(new Dimension(30,30));
+
+
+        listaPanel.add(botao);
+        listaPanel.add(Box.createVerticalStrut(20));
+
+
         /**
 
         JButton button = new JButton("Demo Button");
