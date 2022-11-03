@@ -4,13 +4,17 @@ import br.com.univille.poo.listas.servicos.ObterTarefasServico;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class AppUI extends JFrame {
 
     private JPanel listaPanel;
     private ObterTarefasServico servico;
     JButton botao;
+
+    JLabel rotulo;
     private GroupLayout JanelaLayout;
+    private ActionListener te;
 
     public AppUI(){
         setTitle("Tarefas");
@@ -32,11 +36,14 @@ public class AppUI extends JFrame {
         botao.setVerticalTextPosition(AbstractButton.TOP);
         botao.setHorizontalTextPosition(AbstractButton.RIGHT);
 
+
         listaPanel.add(botao);
         listaPanel.add(Box.createVerticalStrut(20));
 
-
         //Work
+        rotulo = new JLabel("Registrar tarefa");
+        rotulo.setAlignmentX(Component.CENTER_ALIGNMENT);
+        listaPanel.add(rotulo);
         /**
 
         JButton button = new JButton("Demo Button");
