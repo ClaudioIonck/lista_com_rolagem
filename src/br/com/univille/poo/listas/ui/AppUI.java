@@ -32,15 +32,21 @@ public class AppUI extends JFrame {
         listaPanel.setLayout(new BoxLayout(listaPanel,BoxLayout.Y_AXIS));
         JScrollPane scrollPane = new JScrollPane(listaPanel);
 
-        //Work
+        //Title
         rotulo = new JLabel("Registrar tarefa");
         rotulo.setAlignmentX(Component.CENTER_ALIGNMENT);
         listaPanel.add(rotulo);
 
+        /**
+        JLabel label = new JLabel();
+        label.setText("Top Left");
+        label.setHorizontalAlignment(JLabel.LEFT);
+        label.setVerticalAlignment(JLabel.TOP);
+        **/
+
+
         //Add bottom
         botao = new JButton("NOVA TAREFA");
-        //botao.setVerticalTextPosition(AbstractButton.TOP);
-        //botao.setHorizontalTextPosition(AbstractButton.RIGHT);
         botao.addActionListener(te);
         botao.setActionCommand("NOVA TAREFA");
         botao.setPreferredSize(new Dimension(30,30));
