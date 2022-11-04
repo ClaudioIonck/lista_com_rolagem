@@ -15,7 +15,7 @@ public class ObterTarefasServico {
     public List<String> obterTodos(){
         List<String> lista = new ArrayList<>();
         for(int i = 0; i < 20; i++){
-            lista.add("Tarefa "+i);
+            lista.add("Tarefa Prioridade: Normal ID: "+i);
         }
         return lista;
     }
