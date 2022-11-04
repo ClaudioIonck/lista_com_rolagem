@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="lista_com_rolagem:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/lista_com_rolagem_jar</output-path>
+    <root id="archive" name="lista_com_rolagem.jar">
+      <element id="module-output" name="lista_com_rolagem" />
+    </root>
+  </artifact>
+</component>
